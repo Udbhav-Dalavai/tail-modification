@@ -23,13 +23,13 @@ plot(eta_values, sapply(eta_values, btm, eta0 = eta0, psi1 = -3, psi2 = 1),
 for (i in 1:length(psi_values)) {
   psi1 <- psi_values[i]
   lines(eta_values, sapply(eta_values, btm, eta0 = eta0, psi1 = psi1, psi2 = 1), 
-        col = colors[i], lty = 1, lwd = 1) # thinner lines
+        col = colors[i], lty = 1, lwd = 1)
 }
 
 for (i in 1:length(psi_values)) {
   psi2 <- psi_values[i]
   lines(eta_values, sapply(eta_values, btm, eta0 = eta0, psi1 = 1, psi2 = psi2), 
-        col = colors[i], lty = 2, lwd = 1) # thinner lines
+        col = colors[i], lty = 2, lwd = 1)
 }
 
 legend("topleft", legend = c(expression("Varying " * psi[1]), expression("Varying " * psi[2])),
